@@ -18,6 +18,13 @@ import { HomeComponent } from './home/home.component';
 import { CourseComponent } from './course/course.component';
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { AboutComponent } from './about/about.component';
+import { CreateCourseStep1Component } from './create-course/create-course-step-1/create-course-step-1.component';
+import { CreateCourseStep2Component } from './create-course/create-course-step-2/create-course-step-2.component';
+import { DragDropComponent } from './drag-drop/drag-drop.component';
+import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
+import { CourseDialogComponent } from './course-dialog/course-dialog.component';
+import { TreeDemoComponent } from './tree-demo/tree-demo.component';
+import { VirtualScrollingComponent } from './virtual-scrolling/virtual-scrolling.component';
 
 @NgModule({
     declarations: [
@@ -29,6 +36,13 @@ import { AboutComponent } from './about/about.component';
         CourseComponent,
         CreateCourseComponent,
         AboutComponent,
+        CreateCourseStep1Component,
+        CreateCourseStep2Component,
+        DragDropComponent,
+        CoursesCardListComponent,
+        CourseDialogComponent,
+        TreeDemoComponent,
+        VirtualScrollingComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
