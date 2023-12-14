@@ -4,26 +4,30 @@ import { Observable, map } from 'rxjs';
 import { Course } from '../model/course';
 import { Lesson } from '../model/lesson';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
 
+  port = 3000;
+  baseUrl = `http://localhost:${this.port}`;
+
   constructor(private http: HttpClient) { }
 
   findCourseById(courseId: number) : Observable<Course> {
-    return this,this.http.get<Course>(`/api/courses${courseId}`);
+    return this,this.http.get<Course>(`${this.baseUrl}/api/courses${courseId}`);
   }
 
   findAllCourses() : Observable<Course[]> {
-    return this.http.get(`/api/courses`)
+    return this.http.get(`${this.baseUrl}/api/courses`)
           .pipe(
             map(res => (res as any).payload)
           );
   }
 
   findAllCourseLessons(courseId: number) : Observable<Lesson[]> {
-    return this.http.get('/api/lessons', {
+    return this.http.get(`${this.baseUrl}/api/lessons`, {
       params: new HttpParams()
           .set('courseId', courseId.toString())
           .set('pageNumber', "0")
@@ -36,7 +40,7 @@ export class CoursesService {
   findLessons(
     courseId: number, sortOrder = 'asc',
     pageNumber = 0, pageSize = 3, sortColumn = 'seqNo') : Observable<Lesson[]> {
-      return this.http.get('/api/lessons', {
+      return this.http.get(`${this.baseUrl}/api/lessons`, {
         params: new HttpParams()
             .set('courseId', courseId.toString())
             .set('sortOrder', sortOrder)

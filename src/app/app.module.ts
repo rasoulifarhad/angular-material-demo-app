@@ -7,13 +7,35 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
 import { RouterModule, Routes }   from '@angular/router';
 import { MatGridListModule } from '@angular/material/grid-list'
+import { MatTooltipModule } from '@angular/material/tooltip'
+import { MatTabsModule } from '@angular/material/tabs'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatCardModule } from '@angular/material/card';
-import { WebDevelopmentCardComponent } from './web-development-card/web-development-card.component';
-import { GridExampleCardComponent } from './grid-example-card/grid-example-card.component';
 import { MatListModule }  from '@angular/material/list';
-import { ListExampleCardComponent } from './list-example-card/list-example-card.component';
+import { MatSidenavModule } from '@angular/material/sidenav'
+
+
+import {MatMenuModule} from '@angular/material/menu';
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import {  MatDialogModule } from "@angular/material/dialog";
+import {  MatInputModule } from "@angular/material/input";
+import {  MatPaginatorModule } from "@angular/material/paginator";
+import {  MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import {  MatSelectModule } from "@angular/material/select";
+import { MatSortModule } from "@angular/material/sort";
+import {  MatTableModule } from "@angular/material/table";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import {CoursesService} from "./services/courses.service";
+import {MatStepperModule} from '@angular/material/stepper';
+import { MatCheckboxModule} from '@angular/material/checkbox';
+import { MatRadioModule} from '@angular/material/radio';
+import {MatNativeDateModule} from '@angular/material/core';
+import { MatSliderModule} from '@angular/material/slider';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatTreeModule} from '@angular/material/tree';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
 import { HomeComponent } from './home/home.component';
 import { CourseComponent } from './course/course.component';
 import { CreateCourseComponent } from './create-course/create-course.component';
@@ -29,9 +51,6 @@ import { VirtualScrollingComponent } from './virtual-scrolling/virtual-scrolling
 @NgModule({
     declarations: [
         AppComponent,
-        WebDevelopmentCardComponent,
-        GridExampleCardComponent,
-        ListExampleCardComponent,
         HomeComponent,
         CourseComponent,
         CreateCourseComponent,
@@ -39,9 +58,9 @@ import { VirtualScrollingComponent } from './virtual-scrolling/virtual-scrolling
         CreateCourseStep1Component,
         CreateCourseStep2Component,
         DragDropComponent,
-        CoursesCardListComponent,
         CourseDialogComponent,
         TreeDemoComponent,
+        CoursesCardListComponent,
         VirtualScrollingComponent,
     ],
     providers: [],
@@ -58,8 +77,39 @@ import { VirtualScrollingComponent } from './virtual-scrolling/virtual-scrolling
         MatCardModule,
         RouterModule,
         MatGridListModule,
-        MatListModule
+        MatListModule,
+        MatTooltipModule,
+        MatTabsModule,
+        MatSidenavModule,
 
+        MatMenuModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCardModule,
+        MatTabsModule,
+        MatSidenavModule,
+        MatListModule,
+        MatToolbarModule,
+        MatTooltipModule,
+        MatInputModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatProgressSpinnerModule,
+        MatStepperModule,
+        MatDialogModule,
+        AppRoutingModule,
+        MatSelectModule,
+        MatCheckboxModule,
+        DragDropModule,
+        MatRadioModule,
+        MatSliderModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        ReactiveFormsModule,
+        MatGridListModule,
+        MatTreeModule,
+        ScrollingModule,
 
     ]
 })
