@@ -16,18 +16,18 @@ export class CoursesService {
   constructor(private http: HttpClient) { }
 
   findCourseById(courseId: number) : Observable<Course> {
-    return this,this.http.get<Course>(`${this.baseUrl}/api/courses${courseId}`);
+    return this,this.http.get<Course>(`${this.baseUrl}/courses${courseId}`);
   }
 
   findAllCourses() : Observable<Course[]> {
-    return this.http.get(`${this.baseUrl}/api/courses`)
+    return this.http.get(`${this.baseUrl}/courses`)
           .pipe(
             map(res => (res as any).payload)
           );
   }
 
   findAllCourseLessons(courseId: number) : Observable<Lesson[]> {
-    return this.http.get(`${this.baseUrl}/api/lessons`, {
+    return this.http.get(`${this.baseUrl}/lessons`, {
       params: new HttpParams()
           .set('courseId', courseId.toString())
           .set('pageNumber', "0")
@@ -40,7 +40,7 @@ export class CoursesService {
   findLessons(
     courseId: number, sortOrder = 'asc',
     pageNumber = 0, pageSize = 3, sortColumn = 'seqNo') : Observable<Lesson[]> {
-      return this.http.get(`${this.baseUrl}/api/lessons`, {
+      return this.http.get(`${this.baseUrl}/lessons`, {
         params: new HttpParams()
             .set('courseId', courseId.toString())
             .set('sortOrder', sortOrder)
