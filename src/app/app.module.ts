@@ -113,4 +113,6 @@ import { VirtualScrollingComponent } from './virtual-scrolling/virtual-scrolling
 
     ]
 })
-export class AppModule { }
+export class AppModule {
+
+ }
