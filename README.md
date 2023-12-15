@@ -44,3 +44,13 @@ See https://github.com/angular-university/angular-router-menu-system
 See https://www.concretepage.com/angular/angular-crud
 See https://angular.io/guide/http-request-data-from-server
 See https://blog.angular-university.io/angular-http/
+
+
+vscode :
+
+
+- Ctrl+P will let you navigate to any file or symbol by typing its name
+- Ctrl+Tab will cycle you through the last set of files opened
+- Ctrl+Shift+P will bring you directly to the editor commands
+- Ctrl+Shift+O will let you navigate to a specific symbol in a file
+- Ctrl+G will let you navigate to a specific line in a file
