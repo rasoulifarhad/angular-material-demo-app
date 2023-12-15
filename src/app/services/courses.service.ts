@@ -16,7 +16,7 @@ export class CoursesService {
   constructor(private http: HttpClient) { }
 
   findCourseById(courseId: number) : Observable<Course> {
-    return this,this.http.get<Course>(`${this.baseUrl}/courses${courseId}`);
+    return this,this.http.get<Course>(`${this.baseUrl}/courses/${courseId}`);
   }
 
   findAllCourses() : Observable<Course[]> {
